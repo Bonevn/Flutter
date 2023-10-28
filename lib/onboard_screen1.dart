@@ -15,10 +15,14 @@ class _OnboardScreen1State extends State<OnboardScreen1> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Image.asset("assets/images/onboard1.png"),
+          SizedBox(
+            height: 479,
+            width: double.infinity,
+            child: Image.asset("assets/images/onboard1.png"),
+          ),
           Expanded(
             child: Container(
-              height: 352.33,
+              height: 357.33,
               width: double.infinity,
               decoration: const BoxDecoration(
                 boxShadow: [
@@ -38,7 +42,6 @@ class _OnboardScreen1State extends State<OnboardScreen1> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  // Image.asset("assets/images/onboard1.png"),
                   const Padding(
                     padding: EdgeInsets.only(bottom: 20, top: 48.33),
                     child: Text(

@@ -17,34 +17,16 @@ class _OnboardState extends State<Onboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          PageView(
-            controller: controller,
-            onPageChanged: (index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-            children: const <Widget>[
-              OnboardScreen1(),
-              OnboardScreen2(),
-            ],
-          ),
-          // Align(
-          //   alignment: Alignment.bottomCenter,
-          //   child: Padding(
-          //     padding: const EdgeInsets.only(bottom: 54),
-          //     child: Row(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: List.generate(
-          //           2,
-          //           (index) => _selectedIndex == index
-          //               ? Image.asset("assets/vectors/ic_cham.svg")
-          //               : Image.asset("assets/vectors/ic_cham_cam.svg")),
-          //     ),
-          //   ),
-          // ),
+      body: PageView(
+        controller: controller,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
+        children: const <Widget>[
+          OnboardScreen1(),
+          OnboardScreen2(),
         ],
       ),
     );
