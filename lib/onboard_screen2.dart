@@ -39,13 +39,13 @@ class _OnboardScreen2State extends State<OnboardScreen2> {
                 ),
                 color: Colors.white,
               ),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(bottom: 20, top: 48.33),
                     child: Text(
-                      "Manage your activity",
+                      "Save the time",
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w700,
@@ -53,8 +53,8 @@ class _OnboardScreen2State extends State<OnboardScreen2> {
                       ),
                     ),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 64, left: 25, right: 25),
+                  Padding(
+                    padding: EdgeInsets.only(left: 25, right: 25),
                     child: Text(
                       "Manage the progress of the tasks completion track the time and analyze tha stats",
                       style: TextStyle(
@@ -64,34 +64,34 @@ class _OnboardScreen2State extends State<OnboardScreen2> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const OnboardScreen2(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      margin: const EdgeInsets.only(bottom: 35),
-                      height: 57,
-                      width: 325,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: const Color(0xFFF26950),
-                      ),
-                      child: const Text(
-                        "Next",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 18,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
+                  // InkWell(
+                  //   onTap: () {
+                  //     if (_selectedIndex == 0) {
+                  //       controller.jumpToPage(1);
+                  //     } else {
+                  //       controller.jumpToPage(0);
+                  //     }
+                  //   },
+                  //   child: Container(
+                  //     alignment: Alignment.center,
+                  //     margin: const EdgeInsets.only(bottom: 35),
+                  //     height: 57,
+                  //     width: 325,
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(15),
+                  //       color: const Color(0xFFF26950),
+                  //     ),
+                  //     child: const Text(
+                  //       "Get Started",
+                  //       style: TextStyle(
+                  //         fontWeight: FontWeight.w700,
+                  //         fontSize: 18,
+                  //         color: Colors.white,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+                  Spacer(),
                 ],
               ),
             ),

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:task_management/activity.dart';
+import 'package:task_management/notification_screen.dart';
+// import 'package:task_management/login.dart';
+// import 'package:task_management/login_screen.dart';
 import 'package:task_management/onboard.dart';
-import 'package:task_management/onboard_screen1.dart';
+import 'package:task_management/sidebar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +20,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Onboard(),
+      home: const MyHomePage(
+        title: "Flutter",
+      ),
     );
   }
 }
@@ -81,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => const OnboardScreen1(),
+                  builder: (context) => const Onboard(),
                 ),
               );
             },
